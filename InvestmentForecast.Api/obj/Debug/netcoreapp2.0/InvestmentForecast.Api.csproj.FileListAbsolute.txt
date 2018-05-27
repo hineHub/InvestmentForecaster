@@ -1,0 +1,11 @@
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecast.Api.deps.json
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecast.Api.runtimeconfig.json
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecast.Api.runtimeconfig.dev.json
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecast.Api.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.csprojAssemblyReference.cache
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.csproj.CoreCompileInputs.cache
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.AssemblyInfoInputs.cache
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.AssemblyInfo.cs
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecast.Api.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.pdb
