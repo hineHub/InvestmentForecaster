@@ -14,8 +14,7 @@ export class InvestmentForecastLineChartComponent {
   set chartProperties(chartProperties: ForecastChartRequest) {
     this.createChart(chartProperties);
   }
- 
-  //get chartProperties(): IForecastChartRequest { return this.chartProperties; }
+
   constructor() { }
 
   createChart(request: ForecastChartRequest) {
@@ -67,7 +66,7 @@ export class InvestmentForecastLineChartComponent {
       datasets.push(
       {            
           data: value.lowerBound,
-          fill: value.higherBound ? "+1" : false,
+          fill: false,
           label: value.label,
           backgroundColor: value.backgroundColor,
           borderColor: value.backgroundColor}
@@ -78,7 +77,7 @@ export class InvestmentForecastLineChartComponent {
         datasets.push(
             {            
               data: value.higherBound,
-              fill: false,
+              fill: '-1',
               label: value.label,
               backgroundColor: value.backgroundColor,
               borderColor: value.backgroundColor

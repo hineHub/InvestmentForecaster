@@ -44,7 +44,7 @@ export class InvestmentForecastFormComponent implements OnInit {
 
     let targetValue = [];
     let years = [];
-    for (let i=0; i< this._term; i++)
+    for (let i=0; i<= this._model.InvestmentTermInYears; i++)
     {
       targetValue.push(this._targetValue);
       years.push(i);
