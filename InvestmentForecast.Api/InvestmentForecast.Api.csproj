@@ -18,4 +18,9 @@
     <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="2.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\InvestmentForecaster.Domain\InvestmentForecaster.Domain.csproj" />
+    <ProjectReference Include="..\InvestmentForecaster.Service\InvestmentForecaster.Service.csproj" />
+  </ItemGroup>
+
 </Project>

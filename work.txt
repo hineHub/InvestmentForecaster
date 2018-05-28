@@ -1,0 +1,20 @@
+1) Added webapplication project (api, create new github repo, docker disabled)
+	set the debug properties so that SSL is always used
+
+2) Add Home Controller and TestConnectivity method
+3) Add swagger (Followed - https://docs.microsoft.com/en-us/aspnet/core/tutorials/getting-started-with-swashbuckle?view=aspnetcore-2.0&tabs=netcore-cli%2Cvisual-studio-xml)
+	- set it to default to root url (c.RoutePrefix = string.Empty)
+4) Call TestConnectivity method using swagger
+5) Add MVC routing defaults (rather than at controller level)
+6) Add CORS
+
+7) Set up unit test project
+8) Set up integration test project
+
+
+
+You have to agree to run as SSL and trust the cert
+
+
+
+Change name to investment forecast api

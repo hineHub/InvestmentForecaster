@@ -15,3 +15,7 @@ C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\In
 C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.csproj.CopyComplete
 C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.dll
 C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecaster.Domain.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecaster.Service.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecaster.Domain.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecaster.Service.pdb

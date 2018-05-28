@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using InvestmentForecast.Api.Extensions;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -30,7 +31,7 @@ namespace InvestmentForecast.Api
                        .AllowAnyMethod()
                        .AllowAnyHeader();
             }));
-
+            services.RegisterDependencies();
             services.AddMvc();
             services.AddSwaggerGen(c =>
             {

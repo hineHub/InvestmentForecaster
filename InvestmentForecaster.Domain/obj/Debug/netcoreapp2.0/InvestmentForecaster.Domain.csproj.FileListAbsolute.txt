@@ -1,0 +1,8 @@
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecaster.Domain\bin\Debug\netcoreapp2.0\InvestmentForecaster.Domain.deps.json
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecaster.Domain\bin\Debug\netcoreapp2.0\InvestmentForecaster.Domain.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecaster.Domain\bin\Debug\netcoreapp2.0\InvestmentForecaster.Domain.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecaster.Domain\obj\Debug\netcoreapp2.0\InvestmentForecaster.Domain.csproj.CoreCompileInputs.cache
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecaster.Domain\obj\Debug\netcoreapp2.0\InvestmentForecaster.Domain.AssemblyInfoInputs.cache
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecaster.Domain\obj\Debug\netcoreapp2.0\InvestmentForecaster.Domain.AssemblyInfo.cs
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecaster.Domain\obj\Debug\netcoreapp2.0\InvestmentForecaster.Domain.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecaster.Domain\obj\Debug\netcoreapp2.0\InvestmentForecaster.Domain.pdb

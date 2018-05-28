@@ -5090,6 +5090,29 @@
         "runtime": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
+      },
+      "InvestmentForecaster.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/InvestmentForecaster.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InvestmentForecaster.Domain.dll": {}
+        }
+      },
+      "InvestmentForecaster.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "InvestmentForecaster.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InvestmentForecaster.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InvestmentForecaster.Service.dll": {}
+        }
       }
     }
   },
@@ -13352,10 +13375,22 @@
         "windowsazure.storage.8.1.4.nupkg.sha512",
         "windowsazure.storage.nuspec"
       ]
+    },
+    "InvestmentForecaster.Domain/1.0.0": {
+      "type": "project",
+      "path": "../InvestmentForecaster.Domain/InvestmentForecaster.Domain.csproj",
+      "msbuildProject": "../InvestmentForecaster.Domain/InvestmentForecaster.Domain.csproj"
+    },
+    "InvestmentForecaster.Service/1.0.0": {
+      "type": "project",
+      "path": "../InvestmentForecaster.Service/InvestmentForecaster.Service.csproj",
+      "msbuildProject": "../InvestmentForecaster.Service/InvestmentForecaster.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "InvestmentForecaster.Domain >= 1.0.0",
+      "InvestmentForecaster.Service >= 1.0.0",
       "Microsoft.AspNetCore.All >= 2.0.8",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.3",
@@ -13391,7 +13426,14 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\beermonster\\source\\repos\\InvestmentForecast.Api\\InvestmentForecaster\\InvestmentForecaster.Domain\\InvestmentForecaster.Domain.csproj": {
+              "projectPath": "C:\\Users\\beermonster\\source\\repos\\InvestmentForecast.Api\\InvestmentForecaster\\InvestmentForecaster.Domain\\InvestmentForecaster.Domain.csproj"
+            },
+            "C:\\Users\\beermonster\\source\\repos\\InvestmentForecast.Api\\InvestmentForecaster\\InvestmentForecaster.Service\\InvestmentForecaster.Service.csproj": {
+              "projectPath": "C:\\Users\\beermonster\\source\\repos\\InvestmentForecast.Api\\InvestmentForecaster\\InvestmentForecaster.Service\\InvestmentForecaster.Service.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

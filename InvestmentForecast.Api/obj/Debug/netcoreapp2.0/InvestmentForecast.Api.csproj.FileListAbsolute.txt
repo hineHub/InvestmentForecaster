@@ -9,3 +9,8 @@ C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\In
 C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecast.Api.pdb
 C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.dll
 C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecaster.Domain.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecaster.Service.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecaster.Domain.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\bin\Debug\netcoreapp2.0\InvestmentForecaster.Service.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api\obj\Debug\netcoreapp2.0\InvestmentForecast.Api.csproj.CopyComplete

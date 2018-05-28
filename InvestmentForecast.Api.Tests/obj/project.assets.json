@@ -5536,6 +5536,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.0",
         "dependencies": {
+          "InvestmentForecaster.Domain": "1.0.0",
+          "InvestmentForecaster.Service": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.8",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.3",
@@ -5546,6 +5548,29 @@
         },
         "runtime": {
           "bin/placeholder/InvestmentForecast.Api.dll": {}
+        }
+      },
+      "InvestmentForecaster.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "compile": {
+          "bin/placeholder/InvestmentForecaster.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InvestmentForecaster.Domain.dll": {}
+        }
+      },
+      "InvestmentForecaster.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.0",
+        "dependencies": {
+          "InvestmentForecaster.Domain": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/InvestmentForecaster.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/InvestmentForecaster.Service.dll": {}
         }
       }
     }
@@ -14481,6 +14506,16 @@
       "type": "project",
       "path": "../InvestmentForecast.Api/InvestmentForecast.Api.csproj",
       "msbuildProject": "../InvestmentForecast.Api/InvestmentForecast.Api.csproj"
+    },
+    "InvestmentForecaster.Domain/1.0.0": {
+      "type": "project",
+      "path": "../InvestmentForecaster.Domain/InvestmentForecaster.Domain.csproj",
+      "msbuildProject": "../InvestmentForecaster.Domain/InvestmentForecaster.Domain.csproj"
+    },
+    "InvestmentForecaster.Service/1.0.0": {
+      "type": "project",
+      "path": "../InvestmentForecaster.Service/InvestmentForecaster.Service.csproj",
+      "msbuildProject": "../InvestmentForecaster.Service/InvestmentForecaster.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {

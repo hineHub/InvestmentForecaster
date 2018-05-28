@@ -3817,12 +3817,27 @@
       },
       "InvestmentForecast.Api/1.0.0": {
         "dependencies": {
+          "InvestmentForecaster.Domain": "1.0.0",
+          "InvestmentForecaster.Service": "1.0.0",
           "Microsoft.AspNetCore.All": "2.0.8",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.3",
           "Swashbuckle.AspNetCore": "2.4.0"
         },
         "runtime": {
           "InvestmentForecast.Api.dll": {}
+        }
+      },
+      "InvestmentForecaster.Domain/1.0.0": {
+        "runtime": {
+          "InvestmentForecaster.Domain.dll": {}
+        }
+      },
+      "InvestmentForecaster.Service/1.0.0": {
+        "dependencies": {
+          "InvestmentForecaster.Domain": "1.0.0"
+        },
+        "runtime": {
+          "InvestmentForecaster.Service.dll": {}
         }
       }
     }
@@ -6081,6 +6096,16 @@
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
     "InvestmentForecast.Api/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InvestmentForecaster.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "InvestmentForecaster.Service/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
