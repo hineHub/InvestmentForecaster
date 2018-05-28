@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { InvestmentForecastService} from './investment-forecast.service'
 import {Chart } from 'chart.js'
 import { ForecastServiceRequest, IForecastServiceRequest} from './api/IForecastRequest'
+import {InvestmentForecastFormComponent } from './investment-forecast-form/investment-forecast-form.component'
 
 @Component({
   selector: 'app-root',

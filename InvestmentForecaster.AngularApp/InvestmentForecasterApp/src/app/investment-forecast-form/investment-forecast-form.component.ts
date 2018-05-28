@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-investment-forecast-form',
+  selector: 'investment-forecast-form',
   templateUrl: './investment-forecast-form.component.html',
   styleUrls: ['./investment-forecast-form.component.css']
 })

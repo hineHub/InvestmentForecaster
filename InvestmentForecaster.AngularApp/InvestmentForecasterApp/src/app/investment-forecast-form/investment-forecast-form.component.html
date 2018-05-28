@@ -1,3 +1,40 @@
-<p>
-  investment-forecast-form works!
-</p>
+    <h2>Investment Forecast</h2>
+    <p>Please fill in the following form to model your annual growth (calculated monthly).</p>
+    <form action="/action_page.php">
+      <div class="form-group">
+        <label for="lumpSum">Lump Sum:</label>
+        <input type="text" class="form-control" id="lumpSum" name="lumpsum">
+      </div>
+      <div class="form-group">
+        <label for="monthlyInvestment">Monthly investment:</label>
+        <input type="text" class="form-control" id="monthlyInvestment" name="monthlyInvestment">
+      </div>
+      <div class="form-group">
+        <label for="investmentTerm">Investment Term (years):</label>
+        <input type="text" class="form-control" id="investmentTerm" name="investmentTerm">
+      </div>
+      <label class="inlineRadioButtonHeader">Risk Level:</label>
+   
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optradio" value="low" checked=""><span>Low</span>
+        </label>
+      </div>
+      <div class="form-check-inline">
+        <label class="form-check-label">
+          <input type="radio" class="form-check-input" name="optradio" value="medium"><span>Medium</span>
+        </label>
+      </div>
+      <div class="form-check-inline">
+          <label class="form-check-label">
+            <input type="radio" class="form-check-input" name="optradio" value="medium"><span>High</span>
+          </label>
+        </div>
+      <div>
+        <button type="submit" class="btn btn-primary" id="calculateForecast">Submit</button>
+      </div>
+    </form>
+ 
+  
+  
+  
