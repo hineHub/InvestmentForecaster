@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27703.2000
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestmentForecast.Api", "InvestmentForecast.Api\InvestmentForecast.Api.csproj", "{7DB54DC3-A54F-4710-A683-A763B7F974EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentForecast.Api.Tests", "InvestmentForecast.Api.Tests\InvestmentForecast.Api.Tests.csproj", "{9E3821F6-E95B-4D50-9153-034FA7C895F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentForecast.E2E.Tests", "InvestmentForecast.Api.Tests\InvestmentForecast.E2E.Tests.csproj", "{9E3821F6-E95B-4D50-9153-034FA7C895F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

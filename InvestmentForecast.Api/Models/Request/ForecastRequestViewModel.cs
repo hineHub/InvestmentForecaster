@@ -4,19 +4,23 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace InvestmentForecast.Api.Models
+namespace InvestmentForecast.Api.Models.Request
 {
-    public class ForecastRequestDTO : IValidatableObject
+    public class ForecastRequestViewModel : IValidatableObject
     {
-        [Range(0, 100000000.00)]
+        const double MaxLumpSumInvestment = 100000000.00;
+        const double MaxMonthlyInvestment = 10000000.00;
+        const int MaxYears = 10;
+
+        [Range(0, MaxLumpSumInvestment)]
         public decimal LumpSumInvestment { get; set; }
 
-        [Range(0, 100000000.00)]
+        [Range(0, MaxMonthlyInvestment)]
         public decimal MonthlyInvestment { get; set; }
 
         [Required]
-        [Range(1, 100)]
-        public int TimeScale { get; set; }
+        [Range(1, MaxYears)]
+        public int InvestmentTermInYears { get; set; }
 
         public string RiskLevel { get; set; }
 

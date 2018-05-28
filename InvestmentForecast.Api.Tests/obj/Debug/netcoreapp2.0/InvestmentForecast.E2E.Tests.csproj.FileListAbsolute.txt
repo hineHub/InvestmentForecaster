@@ -1,0 +1,17 @@
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.csprojAssemblyReference.cache
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.csproj.CoreCompileInputs.cache
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.AssemblyInfoInputs.cache
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.AssemblyInfo.cs
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.deps.json
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.runtimeconfig.json
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.runtimeconfig.dev.json
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecast.Api.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\bin\Debug\netcoreapp2.0\InvestmentForecast.Api.pdb
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.csproj.CopyComplete
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.dll
+C:\Users\beermonster\source\repos\InvestmentForecast.Api\InvestmentForecaster\InvestmentForecast.Api.Tests\obj\Debug\netcoreapp2.0\InvestmentForecast.E2E.Tests.pdb
