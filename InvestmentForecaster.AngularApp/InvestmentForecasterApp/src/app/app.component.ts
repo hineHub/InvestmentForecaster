@@ -74,7 +74,29 @@ export class AppComponent {
                
             },
             options: {
-                responsive: true
+                responsive: true,
+                scales: {
+                  yAxes: [{
+                    scaleLabel: {
+                      display: true,
+                      labelString: 'Value (£)'
+                    }
+                  }],
+                  xAxes: [{
+                    scaleLabel: {
+                      display: true,
+                      labelString: 'Investment Period (Years)'
+                    }
+                  }],
+                },
+                legend: {
+                  labels: {
+                        fontColor: 'black',
+                        defaultFontFamily: 'gesta, sans-serif',
+                        defaultFontSize: 12
+
+                  }
+                } 
             }
           })
       });
