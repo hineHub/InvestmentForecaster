@@ -11,7 +11,7 @@ import {InvestmentForecastFormComponent } from './investment-forecast-form/inves
 })
 export class AppComponent {
   title = 'app';
-  forecastRequest : IForecastServiceRequest = new ForecastServiceRequest(10000, 1000, 5, "low");;
+  forecastRequest : IForecastServiceRequest = new ForecastServiceRequest(10000, 1000, 5, "low");
   chart = [];
 
   constructor(private _investmentForecastService : InvestmentForecastService){

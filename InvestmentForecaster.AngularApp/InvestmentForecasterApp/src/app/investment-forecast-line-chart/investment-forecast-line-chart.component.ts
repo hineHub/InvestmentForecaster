@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-investment-forecast-line-chart',
+  selector: 'investment-forecast-line-chart',
   templateUrl: './investment-forecast-line-chart.component.html',
   styleUrls: ['./investment-forecast-line-chart.component.css']
 })

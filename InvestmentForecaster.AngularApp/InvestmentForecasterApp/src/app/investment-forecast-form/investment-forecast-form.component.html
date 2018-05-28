@@ -1,40 +1,53 @@
     <h2>Investment Forecast</h2>
-    <p>Please fill in the following form to model your annual growth (calculated monthly).</p>
+    <p>Please fill in the following form to model your annual growth (calculated monthly).!!!</p>
     <form action="/action_page.php">
       <div class="form-group">
         <label for="lumpSum">Lump Sum:</label>
-        <input type="text" class="form-control" id="lumpSum" name="lumpsum">
+        <input type="number" [(ngModel)]="_model.LumpSumInvestment" class="form-control" id="lumpSum" name="lumpsum">
       </div>
       <div class="form-group">
         <label for="monthlyInvestment">Monthly investment:</label>
-        <input type="text" class="form-control" id="monthlyInvestment" name="monthlyInvestment">
+        <input type="number" [(ngModel)]="_model.MonthlyInvestment" class="form-control" id="monthlyInvestment" name="monthlyInvestment">
       </div>
       <div class="form-group">
         <label for="investmentTerm">Investment Term (years):</label>
-        <input type="text" class="form-control" id="investmentTerm" name="investmentTerm">
+        <input type="number" [(ngModel)]="_model.InvestmentTermInYears" class="form-control" id="investmentTerm" name="investmentTerm" >
       </div>
       <label class="inlineRadioButtonHeader">Risk Level:</label>
    
       <div class="form-check-inline">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optradio" value="low" checked=""><span>Low</span>
+          <input type="radio" [(ngModel)]="_model.RiskLevel" class="form-check-input" name="optradio" value="low" checked="" ><span>Low</span>
         </label>
       </div>
       <div class="form-check-inline">
         <label class="form-check-label">
-          <input type="radio" class="form-check-input" name="optradio" value="medium"><span>Medium</span>
+          <input type="radio" [(ngModel)]="_model.RiskLevel" class="form-check-input" name="optradio" value="medium"><span>Medium</span>
         </label>
       </div>
       <div class="form-check-inline">
           <label class="form-check-label">
-            <input type="radio" class="form-check-input" name="optradio" value="medium"><span>High</span>
+            <input type="radio" [(ngModel)]="_model.RiskLevel" class="form-check-input" name="optradio" value="high"><span>High</span>
           </label>
+      </div>
+      <span>{{_model.RiskLevel}} rate</span>
+      <div *ngIf="_model.RiskLevel == 'low'">
+        <pre>Wide Bounds: 1 - 3% (annual growth rate)</pre>
+        <pre>Narrow Bounds: 1 - 3% (annual growth rate)</pre>
+      </div>
+      <div *ngIf="_model.RiskLevel == 'medium'">
+          <pre>Wide Bounds: 0 - 5% (anannual growth rate)</pre>
+          <pre>Narrow Bounds: 1.5 - 3.5% (annual growth rate)</pre>
         </div>
       <div>
-        <button type="submit" class="btn btn-primary" id="calculateForecast">Submit</button>
-      </div>
+          <div *ngIf="_model.RiskLevel == 'high'">
+              <pre>Wide Bounds: 1 - 7% (annual growth rate)</pre>
+              <pre>Narrow Bounds: 2 - 4% (annual growth rate)</pre>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary" id="calculateForecast" (click)="onSubmit()" >Submit</button>
+      
     </form>
- 
   
-  
+    <investment-forecast-line-chart></investment-forecast-line-chart>
   
