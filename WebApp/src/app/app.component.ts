@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ForecastFormComponent } from './InvestmentForecast/forecast.form.component';
 
 @Component({
   selector: 'app-root',
