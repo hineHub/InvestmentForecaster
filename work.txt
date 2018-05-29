@@ -18,3 +18,6 @@ You have to agree to run as SSL and trust the cert
 
 
 Change name to investment forecast api
+
+
+Need to check service errors returned in client

@@ -23,7 +23,7 @@ namespace InvestmentForecast.Api.Controllers
         }
 
         /// <summary>
-        /// Calculates the monthly growth value based. Model attribute validation in use.
+        /// Calculates the monthly annual growth value using monthly payments. Model attribute validation in use.
         /// </summary>
         [HttpPost]
         public async Task<IActionResult> Calculate([FromBody] ForecastRequestViewModel request)

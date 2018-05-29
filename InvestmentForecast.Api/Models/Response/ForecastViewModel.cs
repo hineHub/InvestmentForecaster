@@ -14,17 +14,20 @@ namespace InvestmentForecast.Api.Models.Response
             WideUpperValue = wideUpperValue;
             NarrowLowerValue = narrowLowerValue;
             NarrowUpperValue = narrowUpperValue;
+            Success = true;
         }
 
         public ForecastViewModel(IEnumerable<string> errors)
         {
             Errors = errors;
+            Success = false;
         }
 
         public IEnumerable<ErrorModel> HasErrors { get; }
         public IEnumerable<string> Errors { get; }
 
-
+        public bool Success { get; } 
+        
         public IEnumerable<decimal> TotalValue { get; }
         public IEnumerable<decimal> WideLowerValue { get; }
         public IEnumerable<decimal> WideUpperValue { get; }
