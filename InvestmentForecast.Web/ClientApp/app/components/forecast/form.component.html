@@ -1,0 +1,15 @@
+<h2>Investment Forecast</h2>
+<p>Please fill in the following form to model your annual growth (calculated monthly).</p>
+<form action="#">
+
+    <div class="form-group">
+        <label for="lumpSum">Lump Sum (£):</label>
+        <input type="number" [(ngModel)]="_model.LumpSumInvestment" class="form-control" id="lumpSum" name="lumpsum" (keyup)="onKey($event)"
+               [ngClass]="{
+               'is-valid' : !lumpSum_Error || lumpSum_Error.length= =0,
+               'is-invalid' : lumpSum_Error && lumpSum_Error.length> 0
+        }"
+        >
+        <div class="invalid-feedback">{{lumpSum_Error}}</div>
+    </div>
+</form>
