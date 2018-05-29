@@ -9,11 +9,15 @@ import {Chart } from 'chart.js'
 })
 export class InvestmentForecastLineChartComponent {
   chart: Chart;
- 
+
   @Input()
   set chartProperties(chartProperties: ForecastChartRequest) {
-    this.createChart(chartProperties);
+    if (chartProperties && chartProperties.Data)
+    {
+      this.createChart(chartProperties);
+    }
   }
+
 
   constructor() { }
 
@@ -22,6 +26,7 @@ export class InvestmentForecastLineChartComponent {
 
     if (this.chart !== undefined) {
       this.chart.destroy();
+      
     }
 
     this.chart = new Chart('canvas', {

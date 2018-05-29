@@ -11,7 +11,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestmentForecaster.Servic
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestmentForecaster.Domain", "InvestmentForecaster.Domain\InvestmentForecaster.Domain.csproj", "{BAC52921-30AC-499C-BF2B-ABC243881CB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvestmentForecast.Web", "InvestmentForecast.Web\InvestmentForecast.Web.csproj", "{A2ED3036-A2D5-4B26-B8EB-04190C6C3810}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InvestmentForecast.Web", "InvestmentForecast.Web\InvestmentForecast.Web.csproj", "{A2ED3036-A2D5-4B26-B8EB-04190C6C3810}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -10,7 +10,7 @@ namespace InvestmentForecast.Api.Models.Request
     {
         const double MaxLumpSumInvestment = 100000000.00;
         const double MaxMonthlyInvestment = 10000000.00;
-        const int MaxYears = 10;
+        const int MaxYears = 100;
 
         [Range(0, MaxLumpSumInvestment)]
         public decimal LumpSumInvestment { get; set; }

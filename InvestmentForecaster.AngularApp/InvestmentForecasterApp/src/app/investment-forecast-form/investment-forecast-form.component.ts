@@ -8,28 +8,31 @@ import { DataSetObj, ForecastChartRequest } from '../investment-forecast-chart-r
   templateUrl: './investment-forecast-form.component.html',
   styleUrls: ['./investment-forecast-form.component.css']
 })
-export class InvestmentForecastFormComponent implements OnInit {
-  private _lumpSum: number = 10000;
-  private _monthlyInvestment: number = 1000;
+export class InvestmentForecastFormComponent {
+  private _lumpSum: number = 100000;
+  private _monthlyInvestment: number = 2000;
+  private _targetValue: number = 150000;
   private _term: number = 5;
-  _targetValue: number = 150000;
   _riskLevel: string = "low";
   _model : ForecastServiceRequest;
   chartRequest :ForecastChartRequest;
   lumpSum_Error = [];
   term_Error = [];
   monthlyInvestment_Error = [];
+  targetValue_Error = [];
+  riskLevel_Error = [];
+  isFormValid = true;
 
   constructor(private _investmentForecastService : InvestmentForecastService) { 
     
-    this._model = new ForecastServiceRequest(this._lumpSum, this._monthlyInvestment, this._term, this._riskLevel);
+    this._model = new ForecastServiceRequest(this._lumpSum, this._monthlyInvestment, this._targetValue, this._term, this._riskLevel);
   }
 
   onSubmit(){
     if (!this.validate()){
       return;
     }
-    console.log(this._model);
+
     this._investmentForecastService.annualForecast(this._model)
       .subscribe(res => {
         this.assembleChartRequest(res);
@@ -46,7 +49,7 @@ export class InvestmentForecastFormComponent implements OnInit {
     let years = [];
     for (let i=0; i<= this._model.InvestmentTermInYears; i++)
     {
-      targetValue.push(this._targetValue);
+      targetValue.push(this._model.TargetValue);
       years.push(i);
     }
 
@@ -54,7 +57,7 @@ export class InvestmentForecastFormComponent implements OnInit {
     var narrowGroup = new DataSetObj(wideLowerValue, '#464646', wideUpperValue, "wide");
     var targetValueObj = new DataSetObj(targetValue, '#832b29', [], "target")
 
-    this.chartRequest = new ForecastChartRequest(years, new Array(narrowGroup, targetValueObj, wideGroup));
+    this.chartRequest = new ForecastChartRequest(years, new Array(wideGroup, targetValueObj, narrowGroup));
     console.log(this.chartRequest);
   }
 
@@ -62,9 +65,12 @@ export class InvestmentForecastFormComponent implements OnInit {
     this.lumpSum_Error = [];
     this.term_Error = [];
     this.monthlyInvestment_Error = [];
+    this.targetValue_Error = [];
+    this.riskLevel_Error = [];
   }
 
   validate():boolean {
+    this.clearErrors();
     let isValid = true;
 
     if (this._model.LumpSumInvestment <= 0 || this._model.LumpSumInvestment > 10000000){
@@ -72,23 +78,42 @@ export class InvestmentForecastFormComponent implements OnInit {
       isValid = false;
     }
     if (this._model.MonthlyInvestment <= 0 || this._model.MonthlyInvestment > 10000000){
-      this.lumpSum_Error.push("Monthly investment must be between 1 and 10,000,000");
+      this.monthlyInvestment_Error.push("Monthly investment must be between 1 and 10,000,000");
       isValid = false;
     }
     if (this._model.InvestmentTermInYears <= 0 || this._model.InvestmentTermInYears > 100){
-      this.lumpSum_Error.push("Investment term must be between 1 and 100");
+      this.term_Error.push("Investment term must be between 1 and 100");
       isValid = false;
     }
 
+    if (this._model.TargetValue  <= 0  || this._model.TargetValue > 10000000)
+    {
+      this.targetValue_Error.push("Target value term must be between 1 and 10,000,000");
+      isValid = false;
+    }
+
+    switch (this._model.RiskLevel){
+      case 'low':
+      case 'medium':
+      case 'high':
+        break;
+      default:
+        this.riskLevel_Error.push("Risk level acceptable values (low, medium, high)");
+        isValid = false;
+    }
+
+    this.isFormValid = isValid;
+    console.log(this.isFormValid);
     return isValid;
   }
- /* calculate(){
-    console.log("--");
-    console.log(this._model);
-    console.log("--");
-  }*/
 
-  ngOnInit() {
+  ngAfterViewInit() {
+    this.onSubmit();
+  }
+
+  onKey(event: any) { 
+    console.log("validating");
+    this.validate();
   }
 
 }
