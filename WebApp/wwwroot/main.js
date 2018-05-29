@@ -321,7 +321,7 @@ module.exports = "#calculateForecast {\r\n  clear: both;\r\n  width: 100%;\r\n}\
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<h2>Investment Forecast</h2>\r\n<p>Please fill in the following form to model your annual growth (calculated monthly).</p>\r\n<form action=\"#\">\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"lumpSum\">Lump Sum (£):</label>\r\n    <input type=\"number\" maxlength=\"8\" [(ngModel)]=\"_model.LumpSumInvestment\" class=\"form-control\" id=\"lumpSum\" name=\"lumpsum\" (keyup)=\"onKey($event)\"\r\n           [ngClass]=\"{\r\n           'is-valid' : !_model.LumpSumInvestmentError || !_model.LumpSumInvestmentError.length == 0,\r\n           'is-invalid' : _model.LumpSumInvestmentError && _model.LumpSumInvestmentError.length > 0\r\n           }\" \r\n    >\r\n    <div class=\"invalid-feedback\">{{_model.LumpSumInvestmentError}}</div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"monthlyInvestment\">Monthly investment (£):</label>\r\n    <input type=\"number\" [(ngModel)]=\"_model.MonthlyInvestment\" class=\"form-control\" id=\"monthlyInvestment\" name=\"monthlyInvestment\" (keyup)=\"onKey($event)\"\r\n           [ngClass]=\"{\r\n           'is-valid' : !_model.MonthlyInvestmentError || _model.MonthlyInvestmentError.length == 0,\r\n           'is-invalid' : _model.MonthlyInvestmentError && _model.MonthlyInvestmentError.length > 0\r\n    }\"\r\n    >\r\n    <div class=\"invalid-feedback\">{{_model.MonthlyInvestmentError}}</div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"targetValue\">Target value (£):</label>\r\n    <input type=\"number\" [(ngModel)]=\"_model.TargetValue\" class=\"form-control\" id=\"targetValue\" name=\"targetValue\" (keyup)=\"onKey($event)\"\r\n           [ngClass]=\"{\r\n           'is-valid' : !_model.TargetValueError || _model.TargetValueError.length == 0,\r\n           'is-invalid' : _model.TargetValueError && _model.TargetValueError.length > 0\r\n    }\"\r\n    >\r\n    <div class=\"invalid-feedback\">{{_model.TargetValueError}}</div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"investmentTerm\">Investment Term (years):</label>\r\n    <input type=\"number\" [(ngModel)]=\"_model.InvestmentTermInYears\" class=\"form-control is-valid\"\r\n           id=\"investmentTerm\" name=\"investmentTerm\" (keyup)=\"onKey($event)\"\r\n           [ngClass]=\"{\r\n           'is-valid' : !_model.InvestmentTermInYearsError || _model.InvestmentTermInYearsError.length == 0,\r\n           'is-invalid' : _model.InvestmentTermInYearsError && _model.InvestmentTermInYearsError.length > 0\r\n    }\"\r\n    >\r\n    <div class=\"invalid-feedback\">{{_model.InvestmentTermInYearsError}}</div>\r\n  </div>\r\n\r\n  <label class=\"inlineRadioButtonHeader\">Risk Level:</label>\r\n\r\n  <div class=\"form-check-inline\">\r\n    <label class=\"form-check-label\">\r\n      <input type=\"radio\" [(ngModel)]=\"_model.RiskLevel\" class=\"form-check-input\" name=\"optradio\" value=\"low\" checked=\"\"><span>Low</span>\r\n    </label>\r\n  </div>\r\n\r\n  <div class=\"form-check-inline\">\r\n    <label class=\"form-check-label\">\r\n      <input type=\"radio\" [(ngModel)]=\"_model.RiskLevel\" class=\"form-check-input\" name=\"optradio\" value=\"medium\"><span>Medium</span>\r\n    </label>\r\n  </div>\r\n\r\n  <div class=\"form-check-inline\">\r\n    <label class=\"form-check-label\">\r\n      <input type=\"radio\" [(ngModel)]=\"_model.RiskLevel\" class=\"form-check-input\" name=\"optradio\" value=\"high\"><span>High</span>\r\n    </label>\r\n  </div>\r\n\r\n  <div *ngIf=\"_model.RiskLevel == 'low'\">\r\n    <pre>Wide Bounds: 1 - 3% (annual growth rate)</pre>\r\n    <pre>Narrow Bounds: 1 - 3% (annual growth rate)</pre>\r\n  </div>\r\n\r\n  <div *ngIf=\"_model.RiskLevel == 'medium'\">\r\n    <pre>Wide Bounds: 0 - 5% (anannual growth rate)</pre>\r\n    <pre>Narrow Bounds: 1.5 - 3.5% (annual growth rate)</pre>\r\n  </div>\r\n\r\n  <div>\r\n    <div *ngIf=\"_model.RiskLevel == 'high'\">\r\n      <pre>Wide Bounds: 1 - 7% (annual growth rate)</pre>\r\n      <pre>Narrow Bounds: 2 - 4% (annual growth rate)</pre>\r\n    </div>\r\n  </div>\r\n\r\n  <button type=\"submit\" class=\"btn btn-primary\" id=\"calculateForecast\" (click)=\"onSubmit()\"\r\n          [disabled]=\"_model.isValid == false\">\r\n    Submit\r\n  </button>\r\n</form>\r\n\r\n<line-chart [chartProperties]=\"chartRequest\"></line-chart>\r\n"
+module.exports = "<h2>Investment Forecast</h2>\r\n<p>Please fill in the following form to model your annual growth (calculated monthly).</p>\r\n<form action=\"#\">\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"lumpSum\">Lump Sum (£):</label>\r\n    <input type=\"number\" [(ngModel)]=\"_model.LumpSumInvestment\" class=\"form-control\" id=\"lumpSum\" name=\"lumpsum\" (keyup)=\"onKey($event)\"\r\n           [ngClass]=\"{\r\n           'is-valid' : !_model.LumpSumInvestmentError || !_model.LumpSumInvestmentError.length == 0,\r\n           'is-invalid' : _model.LumpSumInvestmentError && _model.LumpSumInvestmentError.length > 0\r\n           }\" \r\n    >\r\n    <div class=\"invalid-feedback\">{{_model.LumpSumInvestmentError}}</div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"monthlyInvestment\">Monthly investment (£):</label>\r\n    <input type=\"number\" [(ngModel)]=\"_model.MonthlyInvestment\" class=\"form-control\" id=\"monthlyInvestment\" name=\"monthlyInvestment\" (keyup)=\"onKey($event)\"\r\n           [ngClass]=\"{\r\n           'is-valid' : !_model.MonthlyInvestmentError || _model.MonthlyInvestmentError.length == 0,\r\n           'is-invalid' : _model.MonthlyInvestmentError && _model.MonthlyInvestmentError.length > 0\r\n    }\"\r\n    >\r\n    <div class=\"invalid-feedback\">{{_model.MonthlyInvestmentError}}</div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"targetValue\">Target value (£):</label>\r\n    <input type=\"number\" [(ngModel)]=\"_model.TargetValue\" class=\"form-control\" id=\"targetValue\" name=\"targetValue\" (keyup)=\"onKey($event)\"\r\n           [ngClass]=\"{\r\n           'is-valid' : !_model.TargetValueError || _model.TargetValueError.length == 0,\r\n           'is-invalid' : _model.TargetValueError && _model.TargetValueError.length > 0\r\n    }\"\r\n    >\r\n    <div class=\"invalid-feedback\">{{_model.TargetValueError}}</div>\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"investmentTerm\">Investment Term (years):</label>\r\n    <input type=\"number\" [(ngModel)]=\"_model.InvestmentTermInYears\" class=\"form-control is-valid\"\r\n           id=\"investmentTerm\" name=\"investmentTerm\" (keyup)=\"onKey($event)\"\r\n           [ngClass]=\"{\r\n           'is-valid' : !_model.InvestmentTermInYearsError || _model.InvestmentTermInYearsError.length == 0,\r\n           'is-invalid' : _model.InvestmentTermInYearsError && _model.InvestmentTermInYearsError.length > 0\r\n    }\"\r\n    >\r\n    <div class=\"invalid-feedback\">{{_model.InvestmentTermInYearsError}}</div>\r\n  </div>\r\n\r\n  <label class=\"inlineRadioButtonHeader\">Risk Level:</label>\r\n\r\n  <div class=\"form-check-inline\">\r\n    <label class=\"form-check-label\">\r\n      <input type=\"radio\" [(ngModel)]=\"_model.RiskLevel\" class=\"form-check-input\" name=\"optradio\" value=\"low\" checked=\"\"><span>Low</span>\r\n    </label>\r\n  </div>\r\n\r\n  <div class=\"form-check-inline\">\r\n    <label class=\"form-check-label\">\r\n      <input type=\"radio\" [(ngModel)]=\"_model.RiskLevel\" class=\"form-check-input\" name=\"optradio\" value=\"medium\"><span>Medium</span>\r\n    </label>\r\n  </div>\r\n\r\n  <div class=\"form-check-inline\">\r\n    <label class=\"form-check-label\">\r\n      <input type=\"radio\" [(ngModel)]=\"_model.RiskLevel\" class=\"form-check-input\" name=\"optradio\" value=\"high\"><span>High</span>\r\n    </label>\r\n  </div>\r\n\r\n  <div *ngIf=\"_model.RiskLevel == 'low'\">\r\n    <pre>Wide Bounds: 1 - 3% (annual growth rate)</pre>\r\n    <pre>Narrow Bounds: 1 - 3% (annual growth rate)</pre>\r\n  </div>\r\n\r\n  <div *ngIf=\"_model.RiskLevel == 'medium'\">\r\n    <pre>Wide Bounds: 0 - 5% (anannual growth rate)</pre>\r\n    <pre>Narrow Bounds: 1.5 - 3.5% (annual growth rate)</pre>\r\n  </div>\r\n\r\n  <div>\r\n    <div *ngIf=\"_model.RiskLevel == 'high'\">\r\n      <pre>Wide Bounds: 1 - 7% (annual growth rate)</pre>\r\n      <pre>Narrow Bounds: 2 - 4% (annual growth rate)</pre>\r\n    </div>\r\n  </div>\r\n\r\n  <button type=\"submit\" class=\"btn btn-primary\" id=\"calculateForecast\" (click)=\"onSubmit()\"\r\n          [disabled]=\"_model.isValid == false\">\r\n    Submit\r\n  </button>\r\n</form>\r\n\r\n<line-chart [chartProperties]=\"chartRequest\"></line-chart>\r\n"
 
 /***/ }),
 
@@ -384,11 +384,11 @@ var ForecastFormComponent = /** @class */ (function () {
         var years = [];
         for (var i = 0; i <= this._model.InvestmentTermInYears; i++) {
             targetValue.push(this._model.TargetValue);
-            years.push(i);
+            years.push(i.toString());
         }
-        var wideGroup = new _chart_chart_request_model__WEBPACK_IMPORTED_MODULE_2__["DataSetObj"](narrowLowerValue, '#ef8500', narrowUpperValue, "narrow");
-        var narrowGroup = new _chart_chart_request_model__WEBPACK_IMPORTED_MODULE_2__["DataSetObj"](wideLowerValue, '#464646', wideUpperValue, "wide");
-        var targetValueObj = new _chart_chart_request_model__WEBPACK_IMPORTED_MODULE_2__["DataSetObj"](targetValue, '#832b29', [], "target");
+        var wideGroup = new _chart_chart_request_model__WEBPACK_IMPORTED_MODULE_2__["ChartDataSet"](narrowLowerValue, '#ef8500', narrowUpperValue, "narrow");
+        var narrowGroup = new _chart_chart_request_model__WEBPACK_IMPORTED_MODULE_2__["ChartDataSet"](wideLowerValue, '#464646', wideUpperValue, "wide");
+        var targetValueObj = new _chart_chart_request_model__WEBPACK_IMPORTED_MODULE_2__["ChartDataSet"](targetValue, '#832b29', [], "target");
         this.chartRequest = new _chart_chart_request_model__WEBPACK_IMPORTED_MODULE_2__["ForecastChartRequest"](years, new Array(wideGroup, targetValueObj, narrowGroup));
         console.log(this.chartRequest);
     };
@@ -423,6 +423,18 @@ var ForecastFormComponent = /** @class */ (function () {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForecastFormViewModel", function() { return ForecastFormViewModel; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (undefined && undefined.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+//added this purely so tests can recognise the class
 var ForecastFormViewModel = /** @class */ (function () {
     function ForecastFormViewModel(lumpSumInvestment, monthlyInvestment, targetValue, investmentTermInYears, riskLevel) {
         this.isValid = true;
@@ -475,6 +487,13 @@ var ForecastFormViewModel = /** @class */ (function () {
         this.isValid = isValid;
         return isValid;
     };
+    ForecastFormViewModel = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'viewmodel',
+            template: ''
+        }),
+        __metadata("design:paramtypes", [Number, Number, Number, Number, String])
+    ], ForecastFormViewModel);
     return ForecastFormViewModel;
 }());
 
@@ -680,15 +699,15 @@ var AppModule = /** @class */ (function () {
 /*!**********************************************!*\
   !*** ./src/app/chart/chart.request.model.ts ***!
   \**********************************************/
-/*! exports provided: DataSetObj, ForecastChartRequest */
+/*! exports provided: ChartDataSet, ForecastChartRequest */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DataSetObj", function() { return DataSetObj; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ChartDataSet", function() { return ChartDataSet; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ForecastChartRequest", function() { return ForecastChartRequest; });
-var DataSetObj = /** @class */ (function () {
-    function DataSetObj(lowerBound, backgroundColor, higherBound, label) {
+var ChartDataSet = /** @class */ (function () {
+    function ChartDataSet(lowerBound, backgroundColor, higherBound, label) {
         this.lowerBound = lowerBound;
         this.backgroundColor = backgroundColor;
         this.label = label;
@@ -696,7 +715,7 @@ var DataSetObj = /** @class */ (function () {
             this.higherBound = higherBound;
         }
     }
-    return DataSetObj;
+    return ChartDataSet;
 }());
 
 var ForecastChartRequest = /** @class */ (function () {

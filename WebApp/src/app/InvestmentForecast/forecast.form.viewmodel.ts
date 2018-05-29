@@ -1,3 +1,5 @@
+import { Component } from '@angular/core';
+
 export interface IForecastFormViewModel {
   LumpSumInvestment: number;
   MonthlyInvestment: number;
@@ -7,6 +9,11 @@ export interface IForecastFormViewModel {
 
 }
 
+//added this purely so tests can recognise the class
+@Component({
+  selector: 'viewmodel',
+  template: ''
+})
 export class ForecastFormViewModel implements IForecastFormViewModel {
   LumpSumInvestment: number;
   MonthlyInvestment: number;

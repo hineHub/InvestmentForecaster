@@ -24,7 +24,7 @@ export class ForecastChartRequest implements IForecastChartRequest {
   XAxisLabels: Array<string>;
   Data: Array<ChartDataSet>;
 
-  constructor(XAxisLabels: Array<string>, Data: Array<DataSetObj>) {
+  constructor(XAxisLabels: Array<string>, Data: Array<ChartDataSet>) {
     this.XAxisLabels = XAxisLabels;
     this.Data = Data;
   }

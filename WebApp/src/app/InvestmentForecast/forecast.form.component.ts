@@ -47,7 +47,7 @@ export class ForecastFormComponent {
     let years = [];
     for (let i = 0; i <= this._model.InvestmentTermInYears; i++) {
       targetValue.push(this._model.TargetValue);
-      years.push(i);
+      years.push(i.toString());
     }
 
     var wideGroup = new ChartDataSet(narrowLowerValue, '#ef8500', narrowUpperValue, "narrow");
