@@ -47,9 +47,9 @@ namespace InvestmentForecast.E2E.Tests.TestBuilder
             return this;
         }
 
-        public ForecastRequestViewModel Build()
+        public CalculateRequest Build()
         {
-            return new ForecastRequestViewModel()
+            return new CalculateRequest()
             {
                 InvestmentTermInYears = _years,
                 LumpSumInvestment = _lumpSum,

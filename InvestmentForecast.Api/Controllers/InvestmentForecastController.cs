@@ -26,7 +26,7 @@ namespace InvestmentForecast.Api.Controllers
         /// Calculates the monthly annual growth value using monthly payments. Model attribute validation in use.
         /// </summary>
         [HttpPost]
-        public async Task<IActionResult> Calculate([FromBody] ForecastRequestViewModel request)
+        public async Task<IActionResult> Calculate([FromBody] CalculateRequest request)
         {
             try
             {
@@ -35,7 +35,7 @@ namespace InvestmentForecast.Api.Controllers
                     RequestDTO requestDto = MapForecastRequestViewModel(request);
                     
                     IEnumerable<ForecastResponseDTO> responseDto = await _orchestrator.Orchestration(requestDto);
-                    ForecastViewModel response = MapForecastResponseDto(responseDto) ;
+                    CalculateResponse response = MapForecastResponseDto(responseDto) ;
                     return Ok(response);
                 }
 
@@ -43,7 +43,7 @@ namespace InvestmentForecast.Api.Controllers
                                 .SelectMany(x => x.Errors)
                                 .Select(x => x.ErrorMessage).ToList();
 
-                return BadRequest(new ForecastViewModel(errors));
+                return BadRequest(new CalculateResponse(errors));
             }
             catch(Exception ex)
             {
@@ -54,7 +54,7 @@ namespace InvestmentForecast.Api.Controllers
             
         }
 
-        private RequestDTO MapForecastRequestViewModel(ForecastRequestViewModel model)
+        private RequestDTO MapForecastRequestViewModel(CalculateRequest model)
         {
             return new RequestDTO()
             {
@@ -65,7 +65,7 @@ namespace InvestmentForecast.Api.Controllers
             };
         }
 
-        private ForecastViewModel MapForecastResponseDto(IEnumerable<ForecastResponseDTO> responseDto)
+        private CalculateResponse MapForecastResponseDto(IEnumerable<ForecastResponseDTO> responseDto)
         {
             var totalInvestmentAmount = responseDto.Select(x => x.TotalInvestmentAmount);
             var totalWideLower = responseDto.Select(x => x.TotalValueWideLower);
@@ -73,7 +73,7 @@ namespace InvestmentForecast.Api.Controllers
             var totalNarrowLower = responseDto.Select(x => x.TotalValueNarrowLower);
             var totalNarrowUpper = responseDto.Select(x => x.TotalValueNarrowUpper);
 
-            return new ForecastViewModel(totalInvestmentAmount, totalWideLower, totalWideUpper, totalNarrowLower, totalNarrowUpper);
+            return new CalculateResponse(totalInvestmentAmount, totalWideLower, totalWideUpper, totalNarrowLower, totalNarrowUpper);
         }
     }
 }

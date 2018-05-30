@@ -31,7 +31,7 @@ namespace InvestmentForecast.E2E.Tests.WideBound
             decimal expectedLowerBound = 50000.00m;
             decimal expectedUpperBound = 50000.00m;
 
-            ForecastRequestViewModel request = new ForecastRequestViewModelBuilder()
+            CalculateRequest request = new ForecastRequestViewModelBuilder()
                 .WithValidDefaults()
                 .WithRiskLevel("medium")
                 .WithLumpSum(lumpSum)
@@ -55,7 +55,7 @@ namespace InvestmentForecast.E2E.Tests.WideBound
             //Arrange
             decimal expectedTotalInvestment = 1210000m;
 
-            ForecastRequestViewModel request = new ForecastRequestViewModelBuilder()
+            CalculateRequest request = new ForecastRequestViewModelBuilder()
                 .WithValidDefaults()
                 .WithRiskLevel("medium")
                 .WithInvestmentTerm(100)

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace InvestmentForecast.Api.Models.Request
 {
-    public class ForecastRequestViewModel : IValidatableObject
+    public class CalculateRequest : IValidatableObject
     {
         const double MaxLumpSumInvestment = 100000000.00;
         const double MaxMonthlyInvestment = 10000000.00;

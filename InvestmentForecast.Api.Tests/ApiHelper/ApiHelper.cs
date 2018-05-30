@@ -23,7 +23,7 @@ namespace InvestmentForecast.E2E.Tests
             _client = _server.CreateClient();
         }
 
-        public async Task<ForecastViewModel> Calculate(ForecastRequestViewModel request)
+        public async Task<ForecastViewModel> Calculate(CalculateRequest request)
         {
             var contents = new StringContent(JsonConvert.SerializeObject(request), Encoding.UTF8, "application/json");
 

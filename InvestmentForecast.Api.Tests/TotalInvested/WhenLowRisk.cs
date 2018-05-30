@@ -34,7 +34,7 @@ namespace InvestmentForecast.E2E.Tests.TotalInvested
             //Arrange
             decimal expectedTotalInvestment = 30000.00m;
 
-            ForecastRequestViewModel request = new ForecastRequestViewModelBuilder()
+            CalculateRequest request = new ForecastRequestViewModelBuilder()
                 .WithValidDefaults()
                 .WithLumpSum(expectedTotalInvestment)
                 .Build();
@@ -58,7 +58,7 @@ namespace InvestmentForecast.E2E.Tests.TotalInvested
             //Arrange
             decimal expectedTotalInvestment = 22000.00m;
 
-            ForecastRequestViewModel request = new ForecastRequestViewModelBuilder()
+            CalculateRequest request = new ForecastRequestViewModelBuilder()
                 .WithValidDefaults()
                 .WithInvestmentTerm(1)
                 .Build();
@@ -82,7 +82,7 @@ namespace InvestmentForecast.E2E.Tests.TotalInvested
             //Arrange
             decimal expectedTotalInvestment = 94000m;
 
-            ForecastRequestViewModel request = new ForecastRequestViewModelBuilder()
+            CalculateRequest request = new ForecastRequestViewModelBuilder()
                 .WithValidDefaults()
                 .WithInvestmentTerm(7)
                 .Build();
@@ -103,7 +103,7 @@ namespace InvestmentForecast.E2E.Tests.TotalInvested
             //Arrange
             decimal expectedTotalInvestment = 1210000m;
 
-            ForecastRequestViewModel request = new ForecastRequestViewModelBuilder()
+            CalculateRequest request = new ForecastRequestViewModelBuilder()
                 .WithValidDefaults()
                 .WithInvestmentTerm(100)
                 .Build();

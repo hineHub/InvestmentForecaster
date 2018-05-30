@@ -11,7 +11,7 @@ import { LineChartComponent } from '../chart/line.chart.component'
   styleUrls: ['./forecast.form.component.css']
 })
 export class ForecastFormComponent {
-  private _model: ForecastFormViewModel;
+  _model: ForecastFormViewModel;
   chartRequest: ForecastChartRequest;
 
   constructor(private _investmentForecastService: InvestmentForecastService) {

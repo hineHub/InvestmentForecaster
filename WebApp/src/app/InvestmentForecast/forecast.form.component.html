@@ -6,7 +6,7 @@
     <label for="lumpSum">Lump Sum (£):</label>
     <input type="number" [(ngModel)]="_model.LumpSumInvestment" class="form-control" id="lumpSum" name="lumpsum" (keyup)="onKey($event)"
            [ngClass]="{
-           'is-valid' : !_model.LumpSumInvestmentError || !_model.LumpSumInvestmentError.length == 0,
+           'is-valid' : !_model.LumpSumInvestmentError || _model.LumpSumInvestmentError.length == 0,
            'is-invalid' : _model.LumpSumInvestmentError && _model.LumpSumInvestmentError.length > 0
            }" 
     >
